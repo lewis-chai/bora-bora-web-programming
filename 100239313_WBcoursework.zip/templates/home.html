@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+body {
+    background-color: #dcff9b;
+    font-family: Verdana, Geneva, sans-serif;
+    color: #1b0056;
+}
+
+.header {
+    text-align: center;
+    font-size: 16pt;
+    font-weight: bold;
+    color: #000aa0;
+    border: 2px solid darkgreen;
+    outline-style: outset;
+    outline-color: #aff7ff;
+    padding: 2px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #86cc94;
+    border: 5px solid lightblue;
+    outline-style: double;
+    outline-color: #41b5b5;
+    outline-width: 5px;
+    margin: 12px;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    padding: 12px 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border-right: 2px solid black;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.topnav a:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.comments {position: relative; overflow: hidden; left: 970px;top: 40px;}
+
+.boxed {
+    overflow: hidden;
+    position: absolute;
+    background-color: #86cc94;
+    border: 5px solid lightblue;
+    outline-style: double;
+    outline-color: #41b5b5;
+    outline-width: 5px;
+    margin: 12px;
+    width: 900px;
+    height: 850px;
+    text-align: center;
+}
+
+
+#map {
+width: 400px;
+height: 400px;
+position: fixed;
+right: -1000px;
+bottom: -10px;
+background-color: grey;
+}
+
+#slideshow {
+position: absolute;
+height: 70%;
+width: 400%;
+overflow: hidden;
+margin: 50px auto;
+padding: 0px;
+background: white;
+animation: mymove 15s linear infinite;
+display: inline-block;
+font-size: 0;
+}
+
+@keyframes mymove {
+from {
+left: 0%;
+    }
+to {
+left: -300%
+}
+}
+
+#slideshow img {
+height: auto;
+width: 25%;
+display: inline;
+overflow: visible;
+}
+
+#rooms{
+font-size: 1.5em;
+}
+
+
+
+</style>
+<title>Bora Bora Resorts</title>
+</head>
+<body>
+
+<div class="header">
+<h1>Bora Bora Resorts</h1>
+</div>
+
+<div class="topnav">
+<a href="Home.html">Home</a>
+<a href="Booking.html">Bookings</a>
+<a href="Attractions.html">Local Attractions</a>
+</div>
+            <!-- Allows people to navigate to different pages -->
+
+<div class="boxed">
+<h2><u>Conrad Bora Bora Nui</u></h2>
+<br>
+<p>Welcome to one of the most coveted resorts on the beautiful island of Bora Bora.
+Here at the Conrad Bora Bora Nui, we have many activites and local attractions. Experience the true beauty of the sun at our beach. Relax and enjoy a refreshment at our full service spa or dine at our resort's incredible restaurants. Guests can also kick back with a drink at our many bars which includes lounges and swimming pools. WiFi is free and we also offer activites for childern such as a kid's pool and club.</p>
+
+<br>
+<b id="rooms">Rooms are selling out fast</b>
+<br>
+<p>Prices may go up, book now while rooms are still available</p>
+
+
+<div id="slideshow">
+  <img id="img_01" src="https://www.tahiti.com/images1/gallery/BOBCBB-PRESEDENTIAL-1000x600_53316.jpg" alt="1"/>
+  <img id="img_02" src="https://www.tahiti.com/images1/gallery/BOBCBB-rowpv-deck-1000x600_53316.jpg" alt="2"/>
+  <img id="img_03" src="https://i.pinimg.com/originals/ae/6c/5f/ae6c5ffdfa69e39a00e56a15dfab8a54.jpg" alt="3"/>
+  <img id="img_04" src="https://lh3.googleusercontent.com/-HTe_k7_KiO4/W2lWrmhS2pI/AAAAAAAADPk/vZ7jwH3Sl5I3-6tYF7uAgR7queQ8UUxCACJoC/w1000-h600/Conrad-Bora-Bora-Special-Offer.jpg" alt="4"/>
+ </div>
+</div>
+            <!-- slides through thre    e images -->
+
+
+
+<div id="map"></div>
+
+<script>
+function initMap() {
+var conrad = {lat: -16.529761, lng: -151.767941};
+var map = new google.maps.Map(
+    document.getElementById('map'), {zoom: 19, center: conrad});
+var marker = new google.maps.Marker({position: conrad, map: map});
+}
+            <!-- Displays map -->
+</script>
+<div class="comments">
+Name: <input type="text" id="myText" value="Mickey">
+<br>
+Review: <input type="text" id="review" value="rev">
+
+<button type="button" onclick="myFunction()">Leave Review</button>
+    
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myText");
+    var defaultVal = x.defaultValue;
+    var currentVal = x.value;
+    
+	var y = document.getElementById("review");
+    var defaultV = y.defaultValue;
+    var currentV = y.value;
+    
+    if (defaultVal == currentVal) {
+        document.getElementById("demo").innerHTML = "Name: "
+        + x.defaultValue
+        + "<br>Review: "+ y.defaultValue;
+    } else {
+        document.getElementById("demo").innerHTML = "Name:" + currentVal
+        + "<br>Review:" + currentV;
+    }
+}
+</script>
+            <!-- Prints the users review -->
+</div>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtOn7tHAAI-QYt8DUy627J-YvNP_RHJKw&callback=initMap">
+</script>
+
+
+
+</body>
+</html>

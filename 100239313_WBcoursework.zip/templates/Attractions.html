@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h2#Intro {
+    color:blue;
+    font-family: monospace;
+}
+    h2{
+    color:red;
+    font-family:intial;
+}
+header {
+    border: 2px solid blue;
+    background-color: #32D6FF;
+    font-size:25px;
+    padding:1em;
+    position: relative;
+}
+  body{
+    background-color:#b7fdff;
+}
+
+    div#navi{
+    border: 2px solid red;
+}
+
+div#main {
+    border:2px solid black;
+    position: absolute;
+    left: 215px;
+    padding-top:40px;
+    padding-right:60px;
+    padding-left:60px;
+    padding-bottom:40px;
+    text-align:center;
+    font-size: 25px;
+    background-color:#32D6FF;
+}
+    nav {
+    border: 2px solid green;
+    float: left;
+    position:relative;
+}
+    
+    .navi {
+    overflow: hidden;
+    background-color: #86cc94;
+    border: 5px solid lightblue;
+    outline-style: double;
+    outline-color: #41b5b5;
+    outline-width: 5px;
+    margin: 12px;
+}
+    .navi a {
+    float: left;
+    display: block;
+    color: black;
+    padding: 12px 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border-right: 2px solid black;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+    .navi a:hover {
+    background-color: yellow;
+    color: black;
+}
+</style>
+    <title>Bora Bora Local Activities</title>
+
+</head>
+<body>
+<header>
+    <h2 id="Intro">Local Activities</h2>
+      <p>In Bora Bora you will never run out of things to do as there's is a large abundance of fun filled activities to participate in! 
+  This includes family fun trips to the beach where you can participate 
+  in one of the most exciting, exhilerating water sports in the form of jet skiing.
+  If you're more of an adventurer you will most definately enjoy seeing the variety 
+  of wildlife on the coasts of our island which you can explore freely with a snorkeling guide.
+  However you may be interested in the history and landmarks of the phenomenal small 
+  island in which case you will find that the full island day tour is just for you.
+  There is an activity for everyone here. </p>
+</header>
+<div class="navi">
+<a href="Home.html">Home</a>
+    <a href="Booking.html">Bookings</a>
+    <a href="Attractions.html">Local Activities</a>
+</div>
+            <!-- Allows people to navigate to different pages -->
+            
+<nav>
+<ol class="Contents">
+<li><a href="#Snorkeling">Snorkeling</a></li> 
+<li><a href="#JetSki">Jet Skiing</a></li>
+<li><a href="#Tour">The Full Island Day Tour</a></li>
+</ol>
+            <!-- Allows people to scroll faster to different sections -->
+</nav>
+<div id="main">
+<h2 id="Snorkeling">Snorkeling</h2>
+<p>Bora Bora is famous for the clear, blue, beauitful water surrounding the island, but beneath the surface of the waters is 
+a whole new alien world. You will see wildlife which you never knew existed. From sea turtles to dolphins and a large range of other
+fish, and even a tropical variety of colourful underwater plants which you can freely explore when you go snorkeling.</p>
+        
+         <img src="Bora-Bora-Shark-Ray-Coral-Garden-Snorkel-Safari.jpg" width="375" height="250" alt="Bora-Bora-Shark-Ray-Coral-Garden-Snorkel-Safari" id="navImg">  
+             <!-- Displauys image -->
+        <br>
+        <button type="button" onclick="imgUpdate()">Another Image</button>
+        
+        <script>
+            function imgUpdate(){
+                var navimg = document.getElementById('navImg');
+                var path = navimg.src;
+                var img = path.split('/').pop();
+                
+                if(img === 'Bora-Bora-Shark-Ray-Coral-Garden-Snorkel-Safari.jpg'){
+                    navimg.src ='1Bora-Bora-Snorkeling.jpg';
+                }else{
+                 navimg.src='Bora-Bora-Shark-Ray-Coral-Garden-Snorkel-Safari.jpg';
+                }
+            }
+        </script>
+                    <!-- Changed image to alternate image -->
+        
+<h2 id="JetSki">Jet Skiing</h2>
+<p>The crystal clear water is an invitation to have fun on the water. You can have plenty of fun if you decide to take up on the breathtaking adventure of jet skiing.
+You can either share a jet ski or ride one by yourself, the choice is yours. You can explore around the whole coasts of Bora Bora and experience wonderful scenery whilst on
+a speedy jetski.</p>
+<img src="jet-ski-trip-bora-bora.jpg" width="375" height="250" alt="bora-bora-jet-ski-tour" id="changeImg">
+     <br>
+        <button type="button" onclick="imgChange()">Another Image</button>
+        
+        <script>
+            function imgChange(){
+                var changeimg = document.getElementById('changeImg');
+                var path = changeimg.src;
+                var img = path.split('/').pop();
+                
+                if(img === 'jet-ski-trip-bora-bora.jpg'){
+                    changeimg.src ='bora-bora-jet-ski-tour.jpg';
+                }else{
+                 changeimg.src='jet-ski-trip-bora-bora.jpg';
+                }
+            }
+        </script>
+        
+    <h2 id ="Tour">The Full Island Tour</h2>
+        <p>If you're interested in finding out more bout the island when you are there, you will definately want to have a look at the full island tour of Bora Bora where all 
+        the mysteries will be explained. Including a thorough talk about the history of the island and how it came out to be so appealing. You will get to see the island inside and out
+         and truely admire the beauty of it.</p>
+        <img src="Bora-Tour.jpg" width="375" height="250" alt="Bora-Bora-Whole-Island" id="putImg">
+          <br>
+        <button type="button" onclick="diffImg()">Another Image</button>
+        
+        <script>
+            function diffImg(){
+                var putimg = document.getElementById('putImg');
+                var path = putimg.src;
+                var img = path.split('/').pop();
+                
+                if(img === 'Bora-Tour.jpg'){
+                    putimg.src ='sofitel-motu-in-bora-bora-with-mount-otemanu-in-background.jpg';
+                }else{
+                 putimg.src='Bora-Tour.jpg';
+                }
+            }
+        </script>
+       
+</div>
+</body>
+</html>

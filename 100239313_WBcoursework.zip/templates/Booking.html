@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+body {
+    background-color: #dcff9b;
+    font-family: Verdana, Geneva, sans-serif;
+    color: #1b0056;
+}
+
+.header {
+    text-align: center;
+    font-size: 16pt;
+    font-weight: bold;
+    color: #000aa0;
+    border: 2px solid darkgreen;
+    outline-style: outset;
+    outline-color: #aff7ff;
+    padding: 2px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #86cc94;
+    border: 5px solid lightblue;
+    outline-style: double;
+    outline-color: #41b5b5;
+    outline-width: 5px;
+    margin: 12px;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    padding: 12px 14px;
+    text-decoration: none;
+    border-right: 2px solid black;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.topnav a:hover {
+    background-color: yellow;
+    color: black;
+}
+
+
+
+</style>
+<title>Bookings Page</title>
+</head>
+
+<body>
+
+<div class="header">
+<h1>Bora Bora Resorts</h1>
+</div>
+
+<div class="topnav">
+<a href="Home.html">Home</a>
+<a href="Booking.html#">Bookings</a>
+<a href="Attractions.html">Local Attractions</a>
+</div>
+            <!-- Allows people to navigate to different pages -->
+
+<form action="Success.html" method="GET">
+ <fieldset>
+   <legend>Personal Details: </legend>
+   <label for="name">Username: </label><input type="text" name="username" id="name" required autofocus placeholder="Your username" pattern="[a-zA-Z]{3,}" title="Please enter more than three letters">
+   <label for="email">Email: </label><input type="text" name="email" id="email" required placeholder="Your Email" pattern="[a-zA-Z]{3,}@[a-zA-Z]{3,}[.]{1}[a-zA-Z}{2,}" title="Please enter a valid email address">
+   <label for="phone">Phone: </label><input type="tel" name="phone" id="phone" required placeholder="Please enter your phone number" pattern="[0-9]{11}" title= "Phone number must be 11 digits">
+            <!-- Allows user input of personal details -->
+   <select name="country" required>
+     <option value="">Choose Country</option>
+<option value="UK">UK</option>
+<option value="US">US</option>
+<option value="CA">CA</option>
+   </select>
+            <!-- Allows user to pick out of a set number of options -->
+  </fieldset>
+  <br>
+  <fieldset>
+    <legend>Booking Details: </legend>
+<label for="date">Booking Date: </label><input id="date" type="date" name="date" min="2018-12-02">
+<label for="date">Return Date: </label><input id="date1" type="date" name="date" min="2018-12-02">
+<label for="numberOfAdults">Number of Adults: </label><input id="numberOfAdults" type="number" name="numberOfAdults" min="1" max="6">
+<label for="numberOfChildren">Number of Children: </label><input id="numberOfChildren" type="number" name="numberOfChildren" min="0" max="6">
+            <!-- Allows user input of their booking details -->
+<p>Meals Required?</p>
+<label for="yesMeals">Yes: </label><input id="yesMeals" type="radio" name="meals" value="yesMeals">
+<label for="noMeals">No: </label><input id="noMeals" type="radio" name="meals" value="noMeals">
+            <!-- Gives user option of yes or no -->
+<br>
+<br>
+    <a href="Success.html"> </a>
+     <button class="submit">Submit</button>
+            <!-- If details are valid, proceed to the "success" page -->
+  </fieldset>
+  </form>
+</body>
+</html>

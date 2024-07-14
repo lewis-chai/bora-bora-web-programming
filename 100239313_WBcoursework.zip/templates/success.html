@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+body {
+    background-color: #dcff9b;
+    font-family: Verdana, Geneva, sans-serif;
+    color: #1b0056;
+}
+
+.header {
+    text-align: center;
+    font-size: 16pt;
+    font-weight: bold;
+    color: #000aa0;
+    border: 2px solid darkgreen;
+    outline-style: outset;
+    outline-color: #aff7ff;
+    padding: 2px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #86cc94;
+    border: 5px solid lightblue;
+    outline-style: double;
+    outline-color: #41b5b5;
+    outline-width: 5px;
+    margin: 12px;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    padding: 12px 14px;
+    text-decoration: none;
+    border-right: 2px solid black;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.topnav a:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.message{
+    font-size: x-large;
+    text-align: center;
+}
+
+
+</style>
+<title>Booking Success Page</title>
+</head>
+
+<body>
+
+<div class="header">
+<h1>Bora Bora Resorts</h1>
+</div>
+
+
+<div class="topnav">
+<a href="Home.html">Home</a>
+<a href="Bookings.html">Bookings</a>
+<a href="Attractions.html">Local Attractions</a>
+</div>
+            <!-- Allows people to navigate to different pages -->
+
+<br>
+<br>
+<br>
+<div class="message">
+    <p>
+    Your booking was successful. A confirmation has been sent to your email address.
+    <br>
+    Click here to return to homepage</p>
+
+
+        <button type="button" onclick="returnHome()">Home</button>
+            <script>
+                function returnHome(){
+                    window.location.href = "home.html";
+}
+            </script>
+            <!-- Allows user to navigate back to the home page -->
+</div>
+
+</body>
+</html>
